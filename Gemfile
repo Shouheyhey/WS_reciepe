@@ -47,6 +47,6 @@ group :development do
   gem 'pry-rails'
 
   gem 'devise'
-  
+
 end
 
