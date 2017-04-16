@@ -1,0 +1,436 @@
+// Place all the styles related to the seminars controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.ind_comment{
+  height: 100px;
+  width: 500px;
+}
+
+body{
+  width:100%;
+}
+
+div.contentsset{
+  width: 980px;
+  height:1500px;
+  padding:23px 0;
+  margin:0 auto;
+}
+
+
+.articles{
+  width:670px;
+  height:2022px;
+  border:20px 30px;
+  border-style: solid;
+  border-color:black;
+  float: left;
+  margin:0 auto;
+}
+
+.articles_index{
+  width:670px;
+  height:1054px;
+  border:20px 30px;
+  border-style: solid;
+  border-color:black;
+  float: left;
+  margin:0 auto;
+}
+
+
+.widegets{
+  width:268px;
+  height:1500px;
+  margin: 0 10px;
+  border-style: solid;
+  border-color:black;
+  position: relative;
+  float:right;
+}
+
+.info{
+  height:50%;
+  width:100%;
+  margin: 0 10px;
+  float:left;
+}
+
+.remark_tag{
+  height:50%;
+  width:100%;
+  margin: 0 10px;
+  float:left;
+}
+
+
+h3{
+  width: auto;
+  height: auto;
+  margin:0 auto;
+  float:left;
+}
+
+
+
+.entrylist_right{
+  width:316px;
+  height:316px;
+  padding:7px;
+  border:1px;
+  border-style: solid;
+  border-color:black;
+  margin-right:16px;
+  margin-bottom:15px;
+  float:left;
+}
+
+.page-header{
+  height:56px;
+  width:650px;
+  margin-left:230px;
+  margin-right:230px;
+  border-top: solid: black;
+  position: relative;
+}
+
+.page-header-index{
+  height:56px;
+  width:650px;
+  margin-left:230px;
+  margin-right:230px;
+  border-top: solid: black;
+  position: relative;
+}
+
+.side-header{
+  height: 51px
+  width:250px;
+  border-top: solid: black;
+  position: relative;
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #eee;
+  }
+
+.attachment{
+  height:300px;
+  width:300px;
+  position: relative;
+}
+
+.article_photo{
+  height:300px;
+  width:300px;
+  margin:0 40px 20px 0;
+}
+
+.entlyst_text{
+    background:no-repeat 284px 48px;
+    background-color: rgba(0,0,0,0.60);
+    position: absolute;
+    bottom: 1px;
+    width: 300px;
+    height: 105px;
+    text-shadow: 1px 1px 1px #000100;
+    padding: 30px 20px 0 10px;
+    box-sizing: border-box;
+    z-index: 3;
+    margin:0 auto;
+}
+
+.entry_seminar_title{
+  color:white;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.footer{
+  text-align: center
+}
+.entrylist{
+  width:664px;
+  height:337px;
+  float: left;
+  position: relative;
+}
+.entrylistset{
+  width:664px;
+  height:270px;
+  float:left;
+  border-bottom-style:dotted;
+}
+
+.entrylist_l{
+    height:160px;
+    width:160px;
+    margin: 5px 5px;
+    float:left;
+}
+
+a{
+  float:right;
+}
+
+.entrylist_r {
+    float: right;
+    width: 480px;
+    height:32px;
+    margin: 5px 5px;
+}
+
+.concept_search{
+  height:180px;
+  width:470px;
+  background:no-repeat 284px 48px;
+  background-color: rgba( 245,245,245, 0.55);
+  float:left;
+}
+
+.image_result{
+  height:160px;
+  width:160px;
+  margin: 5px 5px;
+  float: left
+}
+
+.entrysnsset{
+  height:47px;
+  width:664px;
+  float:left;
+  border-bottom-style:solid;
+}
+
+
+.article_seminar{
+  width:670px;
+  height:950px;
+  border:20px 30px;
+  border-style: solid;
+  border-color:black;
+  float: left;
+  margin:0 auto;
+}
+
+.column_head{
+  width:670px;
+  height:756px;
+  float:left;
+}
+
+.seminar_title{
+  font-size: 120%;
+}
+
+
+}
+h1{
+    font-family:sans-serif;
+}
+
+.timestamp{
+  height:18px;
+  width:670px;
+  margin-bottom:1px;
+  border-bottom:medium gray dashed;
+}
+
+.seminar_photo{
+  height:300px;
+  width:650px;
+  margin:10px 10px;
+}
+
+.column_head_bottom{
+  height:90px;
+  width:650px;
+  float:left;
+}
+.general_info{
+  font-size:130%;
+}
+
+.participants{
+  margin:3px;
+
+}
+.num_ppl{
+  margin:3px;
+
+}
+.span{
+  margin:3px;
+
+}
+.facilitator{
+  margin:3px;
+}
+
+.concept{
+    background: #F6F7F9 top left no-repeat;
+    padding: 10px;
+    line-height: 1.7em;
+    font-weight: bold;
+    width:650px;
+    height:220px;
+}
+.label{
+  width:186.61px;
+  height:33.25px;
+  size:150%;
+  float: left
+}
+
+.seminar_detail{
+  height:810px;
+  width:670px;
+  margin:10px 0px;
+  border-style: solid;
+  border-color:black;
+  float:left;
+  background: #F6F7F9 top left no-repeat;
+    }
+
+h2 {
+  width:185px;
+    }
+
+.intro_container{
+  width:100%;
+  height:260px;
+  border-bottom:3px solid;
+  border-color:black;
+}
+.body_container{
+  width:100%;
+  height:260px;
+  border-bottom:3px solid;
+  border-color:black;
+}
+
+.ending_container{
+  width:100%;
+  height:260px;
+}
+
+.title_container{
+  width:100%;
+  height:260px;
+}
+
+.title_head{
+  height:40px;
+  width:460px;
+  border-color:black;
+  float:left;
+  border-bottom: 1px solid #eee;
+}
+.title{
+  text-align: center;
+  font-size: 200%;
+  margin-top: 10px;
+  margin-bottom: 10px
+}
+.main{
+    background: #F6F7F9 top left no-repeat;
+    padding: 10px;
+    line-height: 1.7em;
+    font-weight: bold;
+    width:100%;
+    height:200px;
+}
+
+.comments{
+  font-size:200%;
+}
+
+.column_head_bottom{
+  height:90px;
+  width:650px;
+  float:left;
+}
+
+.general_info_left{
+  height:100%;
+  width:50%;
+  float:left;
+}
+
+
+
+.general_info_right{
+  height:99px;
+  width:320px;
+  float:right;
+}
+
+.page-header_input{
+  height:56px;
+  width:980px;
+  margin-top:20px;
+  margin-left:230px;
+  margin-right:230px;
+  border-top: solid: black;
+  float:left;
+}
+
+.title_input{
+  font-size: 100%;
+  margin-left: 10px;
+  margin-bottom: 50px;
+  float:left;
+}
+
+textarea.intro{
+  width:600px;
+  height:150px;
+}
+textarea.concept_input{
+  width:635px;
+  height:78px;
+}
+
+
+textarea.time{
+  width:200px;
+  height:600px;
+}
+
+.btn_input{
+width:762px;
+padding-left:15px;
+padding-right:15px;
+margin-left:230px;
+margin-right:230px;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+#seminar_title_search{
+  font-size:200%;
+  float:left;
+  width:100%;
+}
+

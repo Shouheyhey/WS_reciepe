@@ -1,0 +1,46 @@
+<body background="../assets/paper_tex.jpg">
+
+        <div style="text-align: right">
+        <a href="/seminars">ワークショップ一覧に戻る</a>
+        </div>
+
+          <article class="section">
+            <div class="container">
+              <header class="header header--section">
+              </header>
+
+              <form accept-charset="utf-8" action="/" class="js-search-submit" method="get">
+              </form>
+            </div>
+          </article>
+          <article class="section">
+            <div class="container">
+              <header class="header header--section">
+                <h2 class="text-middle">
+                   <h3 class="page-header"><strong>Search result</strong><br />検索結果</h3><p>
+                </h2>
+              </header>
+            </div>
+          </article>
+
+  <div class="contentsset clearfix">
+    <div class="articles">
+        <% @seminar.each do |seminar| %>
+          <%= render partial:"search_result", locals:{ seminar:seminar}%><%end%>
+      </div>
+      <div class="widegets">
+          <div class="info">
+          <h3 class="side-header"><strong>Information</strong><br />~お知らせ~</h3>
+        <% @seminar.each do |seminar| %>
+          <%= render partial:"information", locals:{ seminar:seminar}%><%end%>
+          </div>
+          <div class="remark_tag">
+          <h3 class="side-header">
+              <strong>Hot Keywords</strong><br />~注目のキーワード~</h3>
+          </div>
+          </div>
+      </div>
+    <%= paginate(@seminar) %>
+  </div>
+
+</body>

@@ -1,0 +1,104 @@
+<body background="../assets/paper_tex.jpg">
+ <div id="main_cnt_wrapper">
+    <div id="yjContentsBdy">
+      <div class="yjContainer">
+        <span class="yjGuid"><a id="yjContentsStart" name="yjContentsStart"></a><img alt="ここから本文です" height="1" src="http://i.yimg.jp/yui/jp/tmpl/1.1.0/audionav.gif" width="1"></span>
+        <div style="text-align: right">
+        <a href="/seminars">ワークショップ一覧に戻る</a>
+       </div>
+
+
+            <div class="container clearfix">
+              <div class="contentsset">
+                <div class="column_head">
+                    <h3 class="page-header"><i><strong>ワークショップの概要!!!</strong></i></h3>
+                    <div class="article_seminar">
+                    <div class="seminar_title"><h1><%= @seminar.title%></div></h1><p class="timestamp"><%= @seminar.created_at%><br /></p>
+                    <div class="seminar_photo"><div class="photo_all"><%= image_tag @seminar.photo_file_name%>
+                    </div>
+                    <dd class="concept"><strong>コンセプト:</strong><%= @seminar.concept%></dd>
+
+                    <div class="column_head_bottom">
+                      <div class="tag_zone">
+                      </div>
+                      <div class="general_info">
+                          <div class="participants"><strong>参加した人々:<%=@seminar.participants%></strong></div>
+                          <div class="num_ppl"><strong>参加人数:</strong><%=@seminar.num_ppl%></div>
+                          <div class="span"><strong>期間:</strong><%=@seminar.span%></div>
+                          <div class="facilitator"><strong>ファシリテーター:</strong><%=@seminar.facilitator%></div>
+                      </div>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+
+
+                  <div class="seminar_detail clearfix">
+                  <div class="intro_container">
+                      <h2 id="intro"><span class="label label-warning">Introduction</span></h2>
+                      <div class="title_head">
+                           <div class="title"><strong><%=@seminar.intro_title%></strong></div>
+                          </div>
+                      <div class="main"><strong><%=@seminar.intro%></strong>
+                      </div>
+                  </div>
+
+                  <div class="body_container">
+                      <h2 id="body"><span class="label label-success">Body</span></h2>
+                          <div class="title_head">
+                          <div class="title"><strong><%=@seminar.body_title%></strong></div>
+                          </div>
+                      <div class="main"><strong><%=@seminar.body%></strong></div>
+                      </div>
+
+                  <div class="ending_container">
+                      <h2 id="end"><span class="label label-primary">ending</span></h2>
+                          <div class="title_head">
+                          <div class="title"><strong><%=@seminar.ending%></strong></div>
+                          </div>
+                      <div class="main"><strong><%=@seminar.ending%></strong></div>
+                  </div>
+
+                <div class="text-middle">
+                  <h1 class="comments">みんなのレビュー</h1>
+                    <% if @articles %>
+                      <% @articles.each do |article| %>
+                      <div class="comments">
+                        <div class="comment_ind">
+                          <div class="comment_title">
+                          <h3><%= @name.nickname%></h3>
+                          </div>
+                          <div class="comment_cont">
+                          <%= article.comment %>
+                          </div>
+                           </div>
+                        </div>
+                        <% end %>
+                      <% end %>
+                      </div>
+
+                  <%= form_for [@seminar,@article],method: :post do |f| %>
+                  <div style="margin: 8px 0">
+                            <%= f.text_area :comment, placeholder: 'comments', style: 'width: 667px ;height: 100px;',id: "comment_field" %>
+                            </div>
+                            <div style="margin: 8px 0">
+                            <% f.submit :article, class: "btn btn-primary"%>
+                            <%= submit_tag "投稿",name: "btn btn--block"%>
+                            </div>
+                  <% end %>
+                  </div>
+
+              <footer>
+              <div class="header header--section">
+              </div>
+            <div>
+                      </div>
+           </div>
+              </footer>
+           </div>
+          </div>
+        </div>
+      </div>
+</div>
+</div>
+</body>

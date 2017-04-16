@@ -1,0 +1,26 @@
+<div class="entrylist" clearfix>
+      <dl class="entrylistset">
+        <dt class="entrylist_l">
+          <a href="http://www.ashita-lab.jp/special/7758/">
+                          <img width="160" height="160" src="http://www.ashita-lab.jp/wp-content/uploads/2017/04/170331_sxsw_tmb-160x160.jpg" class="image_result" alt="" srcset="http://www.ashita-lab.jp/wp-content/uploads/2017/04/170331_sxsw_tmb-160x160.jpg 160w, http://www.ashita-lab.jp/wp-content/uploads/2017/04/170331_sxsw_tmb-60x59.jpg 60w, http://www.ashita-lab.jp/wp-content/uploads/2017/04/170331_sxsw_tmb.jpg 300w, http://www.ashita-lab.jp/wp-content/uploads/2017/04/170331_sxsw_tmb-200x200.jpg 200w" sizes="(max-width: 160px) 100vw, 160px">
+                      </a>
+        </dt>
+        <dd class="entrylist_r">
+          <dl>
+            <dt><a id=seminar_title_search  href="
+            /seminars/<%=seminar.id%>"><%=seminar.title%></a>
+            </dt>
+                  <br /><dd class="date"><%=seminar.created_at%></dd>
+                  <dd class="txt">
+                  <p class="concept_search"><%=seminar.concept%></p>
+                  <span><%= link_to "続きを読む",seminar_path(seminar), method: :get %></span>
+            </dd>
+          </dl>
+        </dd>
+      </dl>
+<div class="entrysnsset">
+        <ul class="sns-menu">
+        </ul>
+    </div>
+</div>
+

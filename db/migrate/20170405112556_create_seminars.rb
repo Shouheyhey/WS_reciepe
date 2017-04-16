@@ -3,7 +3,7 @@ class CreateSeminars < ActiveRecord::Migration
     create_table :seminars do |t|
       t.text :title
       t.integer :seminar_id
-      t.timestamps null: false
+      t.timestamps
     end
   end
 end
