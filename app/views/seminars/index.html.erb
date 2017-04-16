@@ -1,0 +1,74 @@
+<header>
+<div id="contents">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="http://ict-enews.net/wp-content/uploads/2016/11/main-58.jpg" width="800px" height="499px" alt="ようこそ">
+     <div class="container">
+            <div class="carousel-caption" font-family="">
+              <h1>[小学生徒対象]RPGを作ってプログラミングを学ぼう!!<h1>
+              <p>2016/11 日比谷公会堂<code></code></p>
+              <p><a class= href= role="button"></a></p>
+            </div>
+          </div>
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>
+    <div class="item">
+      <img src="http://www.xrite.co.jp/images/March_eXact_WS2.jpg" alt="..." width="800px" height="300px">
+      <div class="carousel-caption">
+        ...
+
+      </div>
+    </div>
+    ...
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <img class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</header>
+
+<body background="../assets/paper_tex.jpg">
+  <div class="contentsset clearfix">
+    <div class="articles_index">
+     <h3 class="page-header-index"><strong>Recent Entries</strong><br />~最新の投稿~</h3>
+        <%@seminars.each do |seminar|%>
+          <%= render partial:"seminar", locals:{ seminar:seminar}%><%end%>
+      </div>
+      <div class="widegets">
+          <div class="info">
+          <h3 class="side-header"><strong>Information</strong><br />~お知らせ~</h3>
+        <%@seminars.each do |seminar|%>
+          <%= render partial:"information", locals:{ seminar:seminar}%><%end%>
+          </div>
+          <div class="remark_tag">
+          <h3 class="side-header">
+              <strong>Hot Keywords</strong><br />~注目のキーワード~</h3>
+          </div>
+          </div>
+      <%= paginate(@seminars) %>
+      </div>
+  </div>
+
+<footer>ALL RIGHT RESERVED WS_reciepe (C)
+</footer>
+
+  </body>
+  </html>

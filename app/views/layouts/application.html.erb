@@ -1,14 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WSReciep</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+<title>WSReciepe</title>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<%= csrf_meta_tags %>
 </head>
 <body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/seminars"><h3><strong>WS_reciepe</strong></h3></a>
+      </div>
+              <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"></a>
+           <li class="dropdown">
+               <div class="navbar-form navbar-left clearfix", role="search">
+               <div class="form-group-search" style="float:left">
+               <% if user_signed_in? %>
+               <%=form_tag('/seminars/search', method: :get)do%>
+               <input type="text" class="form-control" placeholder="Search" name="keyword">
+          </div><button type="submit" class="btn btn-default">検索</button>
+              <% end %>
+            <%end%>
+            </li>
+          </li>
+        </ul>
 
-<%= yield %>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="navbar-brand">
+          <ul><%= form_tag("/users/sign_in", method: :get, class: "navbar_right")do%>
+           <input type="submit", value="ログインする" >
+           <%end%>
+           </ul>
+      </div>
+      <div class="navbar-brand">
+          <ul><%= form_tag("/users/sign_out", method: :delete, class: "navbar_right")do%>
+           <input type="submit", value="ログアウトする" >
+           <%end%>
+          </ul>
+        </div>
+        <ul>
+    <div class="navbar-brand">
+          <ul><%= form_tag("/seminars/new", method: :get, class: "navbar_right")do%>
+           <input type="submit", value="ワークショップを投稿する" >
+           <%end%>
+          </ul>
+        </div>
+        <ul>
+
+     </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+  </nav>
+
+  <%= yield %>
 
 </body>
-</html>

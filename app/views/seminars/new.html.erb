@@ -1,0 +1,152 @@
+<body background="../assets/paper_tex.jpg">
+<h3 class="page-header_input"><i><strong>ワークショップの投稿</strong></i></h3>
+<div class="content">
+  <div class="middle_content">
+    <%= form_for [@seminar] do |f|%>
+           <div class="container clearfix">
+              <div class="contentsset">
+                <div class="column_head">
+                    <div class="article_seminar">
+                    <div class="seminar_title">
+                      <div>
+                        <h2>
+                        <%=f.text_field :title, placeholder: "タイトル" %>
+                        </h2>
+                      </div>
+                      <%=f.label :ジャンルを選択してください%>
+                              <select>
+                                        <option value="art">アート系</option>
+                                        <option value="local">まちづくり系</option>
+                                        <option value="social_change">社会変革系</option>
+                                        <option value="nature">自然・環境系</option>
+                                        <option value="education">教育・学習系</option>
+                                        <option value="spritual">精神世界系</option>
+                                        <option value="mixture">統合系</option>
+                            </select>
+                    </div>
+
+                    <p class="timestamp"><%= @seminar.created_at%><br /></p>
+                        <div class="seminar_photo"><%= f.label :ワークショップの写真%><br />
+                        <%= f.file_field :photo, :placeholder => "画像をアップロード"%>
+                    <dd class="concept"><strong>
+                        <div style="margin: 10px 0">
+                        <%= f.label :コンセプト%>
+                        <%=f.text_area :concept,class:"concept_input",placeholder: "ワークショップのコンセプト"%>
+                        </strong>
+                        </div>
+                    </dd>
+
+                    <div class="column_head_bottom">
+                      <div class="tag_zone">
+                      </div>
+                    <div general_info>
+                      <div class="general_info_left">
+                          <div class="participants"><strong>
+                              <div style="margin: 8px">
+                              <%= f.label :対象の参加者%>
+                               <%=f.text_field :participants,placeholder: "対象層"%>
+                              </div></strong>
+                          </div>
+                          <div class="num_ppl"><strong>
+                             <div style="margin: 8px">
+                                 <%= f.label :参加人数%>
+                                 <%=f.text_field :num_ppl,placeholder:"参加人数"%>
+                                 </div></strong>
+                          </div>
+                          <div class="span">
+                                <div style="margin: 8px">
+                                    <%= f.label :期間%>
+                                    <%=f.text_field :span%>
+                               </div>
+                          </div>
+
+                      </div>
+                      <div class="general_info_right">
+                       <div class="facilitator"><strong>
+                               <div style="margin: 8px">
+                                <%= f.label :ファシリテーター%>
+                                <%=f.text_field :facilitator%>
+                                </div>
+                       </strong><%=@seminar.facilitator%></div>
+                        <div>
+                        </div>
+                      </div>
+                      </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    </div>
+
+          <div class="widegets">
+                <div class="info">
+                <h3 class="side-header">
+                    <%= f.label :タイムテーブル%>
+                    <%=f.text_area :time_table, class:"time"%>
+                </h3>
+                </div>
+           <div class="remark_tag">
+                <h3 class="side-header">
+              </div>
+          </div>
+
+                  <div class="seminar_detail clearfix">
+                  <div class="intro_container">
+                      <h2 id="intro"><span class="label label-warning">Introduction</span></h2>
+                      <div>
+                           <div class="title">
+                                <div class="title_input"><%=f.text_field :intro_title, placeholder:"導入活動のタイトル" %></div>
+                           </div>
+                          </div>
+                      <div class="main"><strong>
+                           <div style="margin: 8px">
+                            <%=f.text_area :intro, class:"intro",placeholder:"導入活動の詳細"%>
+                            </div>
+                      </strong>
+                      </div>
+                  </div>
+
+                  <div class="body_container">
+                      <h2 id="body"><span class="label label-success">Body</span></h2>
+                          <div class="title">
+                          <div class="title_input">
+                            <%=f.text_field :body_title, placeholder:"メインパートのタイトル"%>
+                        </div>
+                          </div>
+                      <div class="main">
+                            <div style="margin: 8px">
+                            <%=f.text_area :body,class:"intro",placeholder:"メインパートの詳細"%>
+                            </div>
+                      </div>
+                      </div>
+
+                  <div class="ending_container">
+                      <h2 id="end"><span class="label label-primary">ending</span></h2>
+                          <div class="title">
+                          <div class="title_input">
+                              <%=f.text_field :ending_title, placeholder:"エンディングのタイトル"%>
+                          </div>
+                          </div>
+                      <div class="main">
+                         <div style="margin: 8px">
+                          <%=f.text_area :ending,class:"intro",placeholder:"エンディングパートの詳細"%>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+
+
+      </div>
+  </div>
+          </div>
+
+    <div style="submit_btn">
+        <%= f.submit "送信", class:"btn_input btn-primary withripple"%>
+    </div>
+
+      <% end %>
+  </div>
+</div>
+
+</body>
